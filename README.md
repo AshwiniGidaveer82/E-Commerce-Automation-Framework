@@ -11,9 +11,13 @@ CI/CD using GitHub Actions
 Dockerized Test Execution
 Reusable Page Object Model
 HTML Reports & Artifact Management
+
+
 🛠️ Tech Stack
 
 Robot Framework • Selenium • Python • RequestsLibrary • DatabaseLibrary • Docker • GitHub Actions • Pabot
+
+
 
 EcommerceFramework/
 ├── tests/
@@ -25,11 +29,15 @@ EcommerceFramework/
 ├── docker/
 └── .github/
 
+
+
 ▶️ Execution
 
 robot -d reports tests/
 
 robot -i smoke tests/
+
+
 
 📊 Reports
 
@@ -37,6 +45,8 @@ reports/
 ├── report.html
 ├── log.html
 └── output.xml
+
+
 
 🔄 CI/CD
 
