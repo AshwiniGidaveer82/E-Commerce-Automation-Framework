@@ -1,0 +1,7 @@
+reports/
+screenshots/
+logs/
+output.xml
+log.html
+report.html
+__pycache__/

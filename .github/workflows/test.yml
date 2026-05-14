@@ -1,0 +1,34 @@
+name: Robot Framework Tests
+
+on:
+    push:
+
+jobs:
+    automation:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: Setup Python
+              uses: actions/setup-python@v4
+              with:
+                  python-version: "3.11"
+
+            - name: Install Dependencies
+              run: |
+                  pip install robotframework
+                  pip install robotframework-seleniumlibrary
+                  pip install robotframework-requests
+                  pip install robotframework-databaselibrary
+                  pip install robotframework-pabot
+
+            - name: Execute Tests
+              run: |
+                  robot -d reports tests/
+
+            - name: Upload Reports
+              uses: actions/upload-artifact@v4
+              with:
+                  name: robotframework-reports
+                  path: reports/
